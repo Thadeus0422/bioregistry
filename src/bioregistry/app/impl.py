@@ -249,6 +249,13 @@ BIOREGISTRY_DOMAIN_NAME_BLOCK = dedent("""\
 </p>
 """)
 
+BIOREGISTRY_LONGEVITY_BLOCK = dedent("""\
+The Bioregistry is funded by the Chan Zuckerberg Initiative (CZI) Open Science Grant 2023-329850
+which stipulates unlimited no-cost extensions. We have allocated part of this grant to ensure that
+the domain registration, hosting, and hardware will be funded in the medium- and long term under
+a conservative cost estimate of around $100-200/year.
+""")
+
 
 # docstr-coverage:excused `overload`
 @overload
@@ -423,6 +430,7 @@ def _prepare_config(
     # should not be there if not first-party
     config.setdefault("METAREGISTRY_DEPLOYMENT", BIOREGISTRY_DEPLOYMENT_BLOCK)
     config.setdefault("METAREGISTRY_DOMAIN_NAME_BLOCK", BIOREGISTRY_DOMAIN_NAME_BLOCK)
+    config.setdefault("METAREGISTRY_LONGEVITY_BLOCK", BIOREGISTRY_LONGEVITY_BLOCK)
 
     return config
 
